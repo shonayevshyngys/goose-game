@@ -5,6 +5,7 @@ import domain.model.User;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 import org.jetbrains.annotations.NotNull;
+import requestModels.BaseMessage;
 import requestModels.Credentials;
 
 import java.util.Date;
@@ -16,11 +17,11 @@ public class RegistrationHandler implements Handler {
         if (UserDAO.getByUsername(cr.getUsername())==null){
             User user = new User(cr.getUsername(), cr.getPassword());
             UserDAO.persist(user);
-            context.result("Created user");
+            context.json(new BaseMessage("Created user"));
             context.status(201);
         }
         else {
-            context.result("User exists");
+            context.json(new BaseMessage("User already exists"));
             context.status(400);
         }
 
