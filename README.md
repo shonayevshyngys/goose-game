@@ -20,12 +20,12 @@ This command will create docker image mapped to port 1234 with readt database an
 ## Manually:
 Create database named goosegame and manually change the hibernate.cfg according to your postgres. 
 
-### Running the application
+ Running the application
 
-### mvn clean
+ mvn clean
 
-### mvn clean compile assembly:single
+ mvn clean compile assembly:single
 
-### cd target
+ cd target
 
-### java -jar [JAR file with dependencies]
+ java -jar [JAR file with dependencies]
