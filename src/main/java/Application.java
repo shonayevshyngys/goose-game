@@ -30,7 +30,7 @@ public class Application {
         AppWrapper.getApp().get("/userdata", new PersonalDataHandler(), Collections.singleton(Roles.USER));
         AppWrapper.getApp().get("/getlobbies", new LobbiesHandler(), Collections.singleton(Roles.USER));
         AppWrapper.getApp().post("/creategame", new CreateGameHandler(), Collections.singleton(Roles.USER) );
-
+        AppWrapper.getApp().get("/testconnection", new TestConnectionHandler(), Collections.singleton(Roles.ANYONE));
 
         AppWrapper.getApp().ws("/chat", ws -> {
             ws.onConnect(ctx -> {

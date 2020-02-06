@@ -13,5 +13,6 @@
         <property name="hbm2ddl.auto">create</property>
 
         <mapping class="domain.model.User" />
+        <mapping class="domain.model.Game" />
     </session-factory>
 </hibernate-configuration>
