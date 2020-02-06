@@ -11,13 +11,13 @@ Maven
 Free port 1234 and 7000
 
 
-So docker command:
+#So docker command:
 
-## docker run --name goose  -p 1234:5432  -it -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=goosegame postgres:10
+docker run --name goose  -p 1234:5432  -it -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=goosegame postgres:10
 
-This command will create docker image mapped to port 1234 with readt database and user. For this version clone the docker branch
+This command will create docker image mapped to port 1234 with ready database and user. For this version clone the docker branch
 
-## Manually:
+# Manually:
 Create database named goosegame and manually change the hibernate.cfg according to your postgres. 
 
  Running the application
