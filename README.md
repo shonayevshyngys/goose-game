@@ -11,7 +11,7 @@ Maven
 Free port 1234 and 7000
 
 
-#So docker command:
+# Docker command:
 
 docker run --name goose  -p 1234:5432  -it -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=goosegame postgres:10
 
